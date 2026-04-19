@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Sơ yếu lý lịch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .label {
+            width: 250px;
+            font-weight: bold;
+        }
+        .value {
+            flex: 1;
+            border-bottom: 1px dotted #aaa;
+        }
+        .photo {
+            float: right;
+            width: 120px;
+            height: 150px;
+            border: 1px solid #ccc;
+            text-align: center;
+            line-height: 150px;
+            margin-left: 20px;
+            font-size: 12px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        .footer {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .signature {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="photo">Ảnh 4x6</div>
+
+    <h1>SƠ YẾU LÝ LỊCH</h1>
+    <h2>TỰ THUẬT</h2>
+
+    <h2>I. THÔNG TIN BẢN THÂN</h2>
+
+    <div class="row"><div class="label">Họ và tên:</div><div class="value"></div></div>
+    <div class="row"><div class="label">Giới tính:</div><div class="value"></div></div>
+    <div class="row"><div class="label">Ngày sinh:</div><div class="value"></div></div>
+    <div class="row"><div class="label">Nơi sinh:</div><div class="value"></div></div>
+
+    <h2>II. QUAN HỆ GIA ĐÌNH</h2>
+    <div class="row"><div class="label">Cha:</div><div class="value"></div></div>
+    <div class="row"><div class="label">Mẹ:</div><div class="value"></div></div>
+
+    <h2>III. QUÁ TRÌNH ĐÀO TẠO</h2>
+    <table>
+        <tr>
+            <th>Thời gian</th>
+            <th>Trường</th>
+            <th>Ngành</th>
+        </tr>
+        <tr><td colspan="3">...</td></tr>
+    </table>
+
+    <h2>IV. QUÁ TRÌNH CÔNG TÁC</h2>
+    <table>
+        <tr>
+            <th>Thời gian</th>
+            <th>Đơn vị</th>
+            <th>Chức vụ</th>
+        </tr>
+        <tr><td colspan="3">...</td></tr>
+    </table>
+
+</div>
+
+</body>
+</html>
