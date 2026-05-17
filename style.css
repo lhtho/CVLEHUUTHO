@@ -1,0 +1,143 @@
+
+:root{
+    --primary:#5eead4;
+    --secondary:#7c3aed;
+    --dark:#050816;
+    --card:#0f172a;
+    --text:#e2e8f0;
+    --muted:#94a3b8;
+    --glass:rgba(255,255,255,0.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--dark);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top left,#7c3aed33,transparent 35%),
+    radial-gradient(circle at bottom right,#06b6d433,transparent 35%);
+    z-index:-1;
+}
+
+.navbar{
+    backdrop-filter:blur(18px);
+    background:rgba(0,0,0,0.35);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+}
+
+.glass-card{
+    background:var(--glass);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(18px);
+    border-radius:30px;
+    padding:40px;
+    transition:0.4s;
+}
+
+.glass-card:hover{
+    transform:translateY(-10px);
+}
+
+.hero-title{
+    font-size:72px;
+    font-weight:800;
+    line-height:1.1;
+}
+
+.gradient-text{
+    background:linear-gradient(90deg,#5eead4,#7c3aed);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.profile-img{
+    width:100%;
+    border-radius:30px;
+    box-shadow:0 30px 80px rgba(0,0,0,0.5);
+}
+
+.section{
+    padding:120px 0;
+}
+
+.section-title{
+    font-size:52px;
+    font-weight:800;
+    margin-bottom:60px;
+}
+
+.skill-bar{
+    margin-bottom:25px;
+}
+
+.progress{
+    height:12px;
+    border-radius:30px;
+    background:#1e293b;
+}
+
+.progress-bar{
+    background:linear-gradient(90deg,#5eead4,#7c3aed);
+}
+
+.btn-premium{
+    padding:16px 36px;
+    border-radius:50px;
+    background:linear-gradient(90deg,#5eead4,#7c3aed);
+    border:none;
+    color:white;
+    font-weight:700;
+    transition:0.4s;
+    text-decoration:none;
+}
+
+.btn-premium:hover{
+    transform:translateY(-5px);
+}
+
+.timeline{
+    border-left:2px solid #5eead4;
+    padding-left:30px;
+}
+
+.timeline-item{
+    margin-bottom:40px;
+}
+
+footer{
+    padding:60px 0;
+    text-align:center;
+    color:#94a3b8;
+}
+
+@media(max-width:991px){
+
+    .hero-title{
+        font-size:42px;
+    }
+
+}
