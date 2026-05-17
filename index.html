@@ -1,81 +1,271 @@
 
 <!DOCTYPE html>
-<html lang="vi">
+
+<html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>LÊ HỮU THỌ Portfolio</title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<title>LÊ HỮU THỌ | AI Portfolio</title>
 
+<meta name="description"
+content="AI-powered premium engineering portfolio">
+
+<meta property="og:title"
+content="AI Portfolio">
+
+<meta property="og:description"
+content="Premium Engineering Portfolio">
+
+<meta property="og:image"
+content="THO (2).jpg">
+
+<link rel="icon"
+href="">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+<!-- Font Awesome -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+rel="stylesheet">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
 <style>
 
-body{
+:root{
+    --primary:#5eead4;
+    --secondary:#7c3aed;
+    --dark:#050816;
+    --card:#0f172a;
+    --text:#e2e8f0;
+    --muted:#94a3b8;
+    --glass:rgba(255,255,255,0.08);
+}
+
+*{
     margin:0;
-    font-family:Arial;
-    background:#f4f7fb;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--dark);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top left,#7c3aed33,transparent 30%),
+    radial-gradient(circle at bottom right,#06b6d433,transparent 30%);
+    z-index:-2;
+}
+
+#particles-js{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+.navbar{
+    background:rgba(0,0,0,0.35);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.navbar-brand{
+    font-weight:800;
+    color:white !important;
+}
+
+.nav-link{
+    color:white !important;
+    margin-left:20px;
 }
 
 .hero{
     min-height:100vh;
-
-    background:
-    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-    url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1974');
-
-    background-size:cover;
-
-    color:white;
-
     display:flex;
     align-items:center;
+    position:relative;
 }
 
-.container{
-    width:90%;
-    margin:auto;
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 24px;
+    border-radius:50px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.08);
+    margin-bottom:30px;
+}
+
+.hero-title{
+    font-size:76px;
+    font-weight:800;
+    line-height:1.1;
+}
+
+.gradient-text{
+    background:linear-gradient(90deg,#5eead4,#7c3aed);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero-sub{
+    color:var(--muted);
+    line-height:1.9;
+    margin-top:25px;
+}
+
+.btn-premium{
+    padding:16px 36px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(90deg,#5eead4,#7c3aed);
+    color:white;
+    font-weight:700;
+    text-decoration:none;
+    transition:0.4s;
+}
+
+.btn-premium:hover{
+    transform:translateY(-6px);
+}
+
+.glass-card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(18px);
+    border-radius:30px;
+    border:1px solid rgba(255,255,255,0.08);
+    padding:40px;
+    transition:0.4s;
+}
+
+.glass-card:hover{
+    transform:translateY(-10px);
 }
 
 .profile-img{
     width:100%;
     border-radius:30px;
-    box-shadow:0 20px 60px rgba(0,0,0,0.4);
+    box-shadow:0 30px 80px rgba(0,0,0,0.4);
 }
 
-h1{
-    font-size:70px;
-    font-weight:bold;
+.section{
+    padding:120px 0;
 }
 
-.btn-main{
-    display:inline-block;
-    padding:15px 35px;
-    background:#ffb703;
-    color:black;
-    text-decoration:none;
-    border-radius:50px;
-    margin-top:20px;
-    font-weight:bold;
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
 }
 
-.card{
-    background:white;
-    padding:40px;
-    border-radius:25px;
-    margin-top:40px;
+.section-title h2{
+    font-size:52px;
+    font-weight:800;
+}
+
+.skill-item{
+    margin-bottom:30px;
+}
+
+.progress{
+    height:12px;
+    border-radius:30px;
+    background:#1e293b;
+}
+
+.progress-bar{
+    background:linear-gradient(90deg,#5eead4,#7c3aed);
+}
+
+.stats-box h2{
+    font-size:52px;
+    font-weight:800;
+}
+
+.project-card img{
+    border-radius:20px;
+    transition:0.4s;
+}
+
+.project-card:hover img{
+    transform:scale(1.05);
+}
+
+.feature-icon{
+    font-size:42px;
+    color:#5eead4;
+    margin-bottom:20px;
+}
+
+.timeline{
+    border-left:2px solid #5eead4;
+    padding-left:30px;
+}
+
+.timeline-item{
+    margin-bottom:40px;
+}
+
+.social-icons a{
+    width:48px;
+    height:48px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:rgba(255,255,255,0.08);
+    margin-right:10px;
+    color:white;
+    transition:0.4s;
+}
+
+.social-icons a:hover{
+    transform:translateY(-8px);
+    background:linear-gradient(90deg,#5eead4,#7c3aed);
 }
 
 footer{
-    background:#081b33;
-    color:white;
-    text-align:center;
-    padding:30px;
+    padding:80px 0;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.counter{
+    font-size:56px;
+    font-weight:800;
+}
+
+@media(max-width:991px){
+
+.hero-title{
+    font-size:46px;
+}
+
 }
 
 </style>
@@ -84,38 +274,160 @@ footer{
 
 <body>
 
+<div id="particles-js"></div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="#">
+AI Portfolio
+</a>
+
+<button class="navbar-toggler bg-light"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse"
+id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#about">
+About
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#skills">
+Skills
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#projects">
+Projects
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#contact">
+Contact
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
 <section class="hero">
 
 <div class="container">
 
 <div class="row align-items-center">
 
-<div class="col-md-7">
+<div class="col-lg-7">
 
-<h1>LÊ HỮU THỌ</h1>
+<div data-aos="fade-right">
 
-<h3 style="color:#ffb703;">
-Senior Project Engineer
-</h3>
+<div class="hero-badge">
+<i class="fa-solid fa-bolt"></i>
+AI-Powered Engineering Portfolio
+</div>
 
-<p style="line-height:1.8; font-size:18px;">
+<h1 class="hero-title">
 
-Kỹ sư xây dựng chuyên về quản lý dự án,
-giám sát thi công và điều phối công trình.
+LÊ HỮU THỌ
+
+<br>
+
+<span class="gradient-text">
+Future Engineer
+</span>
+
+</h1>
+
+<h2 class="mt-4"
+id="typed"></h2>
+
+<p class="hero-sub">
+
+Dynamic and detail-oriented Construction Engineer with strong
+experience in project coordination, infrastructure execution,
+technical supervision, and project management.
+
+Passionate about delivering high-quality engineering solutions,
+optimizing construction workflows, and ensuring project success.
+
+PROFILE SUMMARY:
+
 
 </p>
 
-<a href="Document 4 (2).pdf" download class="btn-main">
+<div class="mt-5 d-flex gap-3 flex-wrap">
+
+<a href="Document 4 (4).pdf"
+class="btn-premium">
+
 <i class="fa-solid fa-download"></i>
- Download CV
+Download CV
+
 </a>
 
+<a href="#contact"
+class="btn-premium">
+
+Contact Me
+
+</a>
 
 </div>
 
-<div class="col-md-5">
+<div class="row mt-5">
 
-<img src="THO.jpg" class="profile-img">
+<div class="col-4">
+<h2>5+</h2>
+<p>Years</p>
+</div>
+
+<div class="col-4">
+<h2>30+</h2>
+<p>Projects</p>
+</div>
+
+<div class="col-4">
+<h2>100%</h2>
+<p>Commitment</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-5">
+
+<div class="glass-card"
+data-aos="fade-left">
+
+<img src="THO (2).jpg"
+class="profile-img">
+
+</div>
 
 </div>
 
@@ -125,20 +437,83 @@ giám sát thi công và điều phối công trình.
 
 </section>
 
-<section>
+<!-- WHY HIRE ME -->
+
+<section class="section">
 
 <div class="container">
 
-<div class="card">
+<div class="section-title">
 
-<h2>Thông tin chuyên môn</h2>
+<h2>
+Why Hire Me
+</h2>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+
+<div class="glass-card text-center">
+
+<div class="feature-icon">
+<i class="fa-solid fa-helmet-safety"></i>
+</div>
+
+<h4>
+Construction Expertise
+</h4>
 
 <p>
-• Quản lý dự án xây dựng<br>
-• Giám sát thi công<br>
-• AutoCAD & Hồ sơ kỹ thuật<br>
-• Quản lý tiến độ công trình
+Strong field experience in engineering
+and infrastructure projects.
 </p>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="glass-card text-center">
+
+<div class="feature-icon">
+<i class="fa-solid fa-chart-line"></i>
+</div>
+
+<h4>
+Project Management
+</h4>
+
+<p>
+Efficient timeline and workflow control.
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="glass-card text-center">
+
+<div class="feature-icon">
+<i class="fa-solid fa-award"></i>
+</div>
+
+<h4>
+Quality Assurance
+</h4>
+
+<p>
+Focused on quality, safety,
+and investment efficiency.
+</p>
+
+</div>
+
+</div>
 
 </div>
 
@@ -146,13 +521,539 @@ giám sát thi công và điều phối công trình.
 
 </section>
 
-<footer>
+<!-- SKILLS -->
+
+<section class="section"
+id="skills">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Skills & Expertise
+</h2>
+
+</div>
+
+<div class="glass-card">
+
+
+    <div class="skill-item">
+
+        <div class="d-flex justify-content-between mb-2">
+            <span>Project Management</span>
+            <span>95%</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar"
+            style="width:95%"></div>
+        </div>
+
+    </div>
+    
+    <div class="skill-item">
+
+        <div class="d-flex justify-content-between mb-2">
+            <span>Construction Supervision</span>
+            <span>92%</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar"
+            style="width:92%"></div>
+        </div>
+
+    </div>
+    
+    <div class="skill-item">
+
+        <div class="d-flex justify-content-between mb-2">
+            <span>AutoCAD</span>
+            <span>90%</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar"
+            style="width:90%"></div>
+        </div>
+
+    </div>
+    
+    <div class="skill-item">
+
+        <div class="d-flex justify-content-between mb-2">
+            <span>Technical Documentation</span>
+            <span>88%</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar"
+            style="width:88%"></div>
+        </div>
+
+    </div>
+    
+    <div class="skill-item">
+
+        <div class="d-flex justify-content-between mb-2">
+            <span>Infrastructure Planning</span>
+            <span>91%</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar"
+            style="width:91%"></div>
+        </div>
+
+    </div>
+    
+    <div class="skill-item">
+
+        <div class="d-flex justify-content-between mb-2">
+            <span>Engineering Coordination</span>
+            <span>89%</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar"
+            style="width:89%"></div>
+        </div>
+
+    </div>
+    
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="row text-center">
+
+<div class="col-lg-3">
+
+<div class="stats-box">
+<h2 class="counter"
+data-target="50">0</h2>
+<p>Projects</p>
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="stats-box">
+<h2 class="counter"
+data-target="12">0</h2>
+<p>Certificates</p>
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="stats-box">
+<h2 class="counter"
+data-target="8">0</h2>
+<p>Years</p>
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="stats-box">
+<h2 class="counter"
+data-target="100">0</h2>
+<p>Satisfaction</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section class="section"
+id="projects">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Featured Projects
+</h2>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+
+<div class="glass-card project-card">
+
+<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200"
+class="img-fluid mb-4">
 
 <h4>
-© 2026 LÊ HỮU THỌ Portfolio
+Infrastructure Project
 </h4>
+
+<p>
+Construction supervision
+and execution planning.
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="glass-card project-card">
+
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200"
+class="img-fluid mb-4">
+
+<h4>
+Civil Engineering
+</h4>
+
+<p>
+Technical documentation
+and quality control.
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="glass-card project-card">
+
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200"
+class="img-fluid mb-4">
+
+<h4>
+Public Investment
+</h4>
+
+<p>
+Project coordination
+and timeline management.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Experience
+</h2>
+
+</div>
+
+<div class="glass-card">
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h4>
+2024 - Present
+</h4>
+
+<p>
+Technical Engineer — Ban QLDA ĐTXD
+Khu vực Châu Thành B
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h4>
+2022 - 2024
+</h4>
+
+<p>
+Site Manager — An Kiên Phát Construction
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h4>
+2018 - 2021
+</h4>
+
+<p>
+Technical Staff — Southern Construction
+Investment Corporation
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="section"
+id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Contact
+</h2>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-6">
+
+<div class="glass-card">
+
+<h4 class="mb-4">
+Get In Touch
+</h4>
+
+<p>
+<i class="fa-solid fa-phone"></i>
+0933 830 874
+</p>
+
+<p>
+<i class="fa-solid fa-envelope"></i>
+Lehuutho7553@gmail.com
+</p>
+
+<p>
+<i class="fa-solid fa-location-dot"></i>
+Can Tho, Vietnam
+</p>
+
+<div class="social-icons mt-4">
+
+<a href="#">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+<a href="#">
+<i class="fab fa-linkedin-in"></i>
+</a>
+
+<a href="#">
+<i class="fab fa-github"></i>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-6">
+
+<div class="glass-card">
+
+<form>
+
+<div class="mb-3">
+
+<input type="text"
+class="form-control"
+placeholder="Your Name">
+
+</div>
+
+<div class="mb-3">
+
+<input type="email"
+class="form-control"
+placeholder="Your Email">
+
+</div>
+
+<div class="mb-3">
+
+<textarea rows="5"
+class="form-control"
+placeholder="Message"></textarea>
+
+</div>
+
+<button class="btn-premium border-0">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-6">
+
+<h3>
+LÊ HỮU THỌ
+</h3>
+
+<p>
+AI-Powered Premium Portfolio
+</p>
+
+</div>
+
+<div class="col-lg-6 text-lg-end">
+
+© 2026 All Rights Reserved
+
+</div>
+
+</div>
+
+</div>
 
 </footer>
 
+<!-- SCRIPTS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script>
+
+AOS.init({
+    duration:1200,
+    once:true
+});
+
+particlesJS("particles-js",{
+
+particles:{
+
+number:{value:70},
+
+size:{value:3},
+
+move:{speed:2},
+
+line_linked:{enable:true},
+
+color:{value:"#5eead4"}
+
+}
+
+});
+
+new Typed('#typed',{
+
+strings:[
+
+'Senior Project Engineer',
+'Construction Management Expert',
+'AI Portfolio Developer'
+
+],
+
+typeSpeed:50,
+backSpeed:30,
+loop:true
+
+});
+
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+
+counter.innerText = '0';
+
+const updateCounter = () => {
+
+const target = +counter.getAttribute('data-target');
+
+const c = +counter.innerText;
+
+const increment = target / 100;
+
+if(c < target){
+counter.innerText =
+`${Math.ceil(c + increment)}`;
+
+setTimeout(updateCounter,20);
+
+}else{
+counter.innerText = target;
+}
+
+}
+
+updateCounter();
+
+});
+
+</script>
+
 </body>
+
 </html>
