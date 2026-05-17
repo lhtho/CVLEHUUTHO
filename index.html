@@ -7,160 +7,75 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>LÊ HỮU THỌ | Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>LÊ HỮU THỌ Portfolio</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
 body{
-    font-family:'Poppins',sans-serif;
+    margin:0;
+    font-family:Arial;
     background:#f4f7fb;
-    color:#1e293b;
-    overflow-x:hidden;
-}
-
-#loader{
-    position:fixed;
-    width:100%;
-    height:100vh;
-    background:#081b33;
-    z-index:99999;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.spinner{
-    width:70px;
-    height:70px;
-    border:7px solid rgba(255,255,255,0.2);
-    border-top:7px solid #ffb703;
-    border-radius:50%;
-    animation:spin 1s linear infinite;
-}
-
-@keyframes spin{
-    100%{ transform:rotate(360deg); }
-}
-
-.navbar{
-    background:rgba(8,27,51,0.95);
-}
-
-.navbar-brand,
-.nav-link{
-    color:white !important;
 }
 
 .hero{
     min-height:100vh;
+
     background:
-    linear-gradient(rgba(8,27,51,0.85), rgba(8,27,51,0.9)),
-    url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1974&auto=format&fit=crop');
+    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1974');
 
     background-size:cover;
-    background-position:center;
+
+    color:white;
 
     display:flex;
     align-items:center;
-    color:white;
 }
 
-.hero h1{
+.container{
+    width:90%;
+    margin:auto;
+}
+
+.profile-img{
+    width:100%;
+    border-radius:30px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.4);
+}
+
+h1{
     font-size:70px;
-    font-weight:700;
-}
-
-.hero h2{
-    color:#ffb703;
-    margin-top:15px;
-}
-
-.hero p{
-    margin-top:20px;
-    line-height:1.8;
+    font-weight:bold;
 }
 
 .btn-main{
     display:inline-block;
     padding:15px 35px;
-    border-radius:50px;
     background:#ffb703;
-    color:#081b33;
+    color:black;
     text-decoration:none;
-    font-weight:600;
+    border-radius:50px;
     margin-top:20px;
-    transition:0.3s;
+    font-weight:bold;
 }
 
-.btn-main:hover{
-    transform:translateY(-5px);
-}
-
-section{
-    padding:100px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:60px;
-}
-
-.section-title h2{
-    font-size:42px;
-    font-weight:700;
-}
-
-.card-box{
+.card{
     background:white;
-    padding:35px;
+    padding:40px;
     border-radius:25px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    transition:0.4s;
-}
-
-.card-box:hover{
-    transform:translateY(-8px);
-}
-
-.skill{
-    margin-bottom:25px;
-}
-
-.progress{
-    height:14px;
-    border-radius:30px;
-}
-
-.progress-bar{
-    background:linear-gradient(90deg,#081b33,#ffb703);
+    margin-top:40px;
 }
 
 footer{
     background:#081b33;
     color:white;
     text-align:center;
-    padding:40px 0;
-}
-
-@media(max-width:768px){
-    .hero h1{
-        font-size:42px;
-    }
+    padding:30px;
 }
 
 </style>
@@ -169,74 +84,39 @@ footer{
 
 <body>
 
-<div id="loader">
-    <div class="spinner"></div>
-</div>
-
-<nav class="navbar navbar-expand-lg fixed-top">
-
-<div class="container">
-
-<a class="navbar-brand" href="#">LÊ HỮU THỌ</a>
-
-<button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-<span class="navbar-toggler-icon"></span>
-</button>
-
-<div class="collapse navbar-collapse" id="menu">
-
-<ul class="navbar-nav ms-auto">
-
-<li class="nav-item">
-<a class="nav-link" href="#about">Giới thiệu</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#experience">Kinh nghiệm</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#skills">Kỹ năng</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#contact">Liên hệ</a>
-</li>
-
-</ul>
-
-</div>
-</div>
-</nav>
-
 <section class="hero">
 
 <div class="container">
 
 <div class="row align-items-center">
 
-<div class="col-lg-7">
+<div class="col-md-7">
 
-<h1 data-aos="fade-right">
-LÊ HỮU THỌ
-</h1>
+<h1>LÊ HỮU THỌ</h1>
 
-<h2 data-aos="fade-right">
-Kỹ sư xây dựng
-</h2>
+<h3 style="color:#ffb703;">
+Senior Project Engineer
+</h3>
 
-<p data-aos="fade-right">
+<p style="line-height:1.8; font-size:18px;">
 
-Mong muốn được làm việc trong môi trường chuyên nghiệp,
-phát huy năng lực quản lý dự án và kỹ thuật xây dựng.
+Kỹ sư xây dựng chuyên về quản lý dự án,
+giám sát thi công và điều phối công trình.
 
 </p>
 
-<a href="#" class="btn-main">
+<a href="Document 4 (2).pdf" download class="btn-main">
 <i class="fa-solid fa-download"></i>
-Download CV
+ Download CV
 </a>
 
+
+</div>
+
+<div class="col-md-5">
+
+<img src="THO.jpg" class="profile-img">
+
 </div>
 
 </div>
@@ -245,169 +125,19 @@ Download CV
 
 </section>
 
-<section id="about">
+<section>
 
 <div class="container">
 
-<div class="section-title" data-aos="fade-up">
-<h2>Giới Thiệu</h2>
-</div>
+<div class="card">
 
-<div class="card-box" data-aos="fade-up">
+<h2>Thông tin chuyên môn</h2>
 
 <p>
-Mong muốn được làm việc trong môi trường chuyên nghiệp,
-phát huy năng lực quản lý dự án và kỹ thuật xây dựng.
-</p>
-
-<br>
-
-<h5>Học vấn</h5>
-
-<p>
-Tốt nghiệp chuyên ngành Kỹ thuật xây dựng,
-có kiến thức chuyên môn về thi công, giám sát và quản lý dự án.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="experience" style="background:#eef3f9;">
-
-<div class="container">
-
-<div class="section-title" data-aos="fade-up">
-<h2>Kinh Nghiệm</h2>
-</div>
-
-<div class="card-box" data-aos="fade-up">
-
-<p>
-Tham gia quản lý nhiều công trình xây dựng,
-giám sát thi công, nghiệm thu và quản lý hồ sơ dự án.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="skills">
-
-<div class="container">
-
-<div class="section-title" data-aos="fade-up">
-<h2>Kỹ Năng</h2>
-</div>
-
-<div class="card-box">
-
-
-
-<div class="skill">
-
-<h6>Quản lý dự án</h6>
-
-<div class="progress">
-
-<div class="progress-bar" style="width:95%">
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="skill">
-
-<h6>Giám sát thi công</h6>
-
-<div class="progress">
-
-<div class="progress-bar" style="width:92%">
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="skill">
-
-<h6>AutoCAD</h6>
-
-<div class="progress">
-
-<div class="progress-bar" style="width:90%">
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="skill">
-
-<h6>Tin học văn phòng</h6>
-
-<div class="progress">
-
-<div class="progress-bar" style="width:93%">
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="skill">
-
-<h6>Quản lý hồ sơ</h6>
-
-<div class="progress">
-
-<div class="progress-bar" style="width:88%">
-</div>
-
-</div>
-
-</div>
-
-
-
-</div>
-
-</div>
-
-</section>
-
-<section id="contact" style="background:#eef3f9;">
-
-<div class="container">
-
-<div class="section-title" data-aos="fade-up">
-<h2>Liên Hệ</h2>
-</div>
-
-<div class="card-box">
-
-<p>
-<i class="fa-solid fa-phone"></i>
-0933.830.874 
-
-</p>
-
-<p>
-<i class="fa-solid fa-envelope"></i>
-Lehuutho7553@gmail.com
+• Quản lý dự án xây dựng<br>
+• Giám sát thi công<br>
+• AutoCAD & Hồ sơ kỹ thuật<br>
+• Quản lý tiến độ công trình
 </p>
 
 </div>
@@ -418,27 +148,11 @@ Lehuutho7553@gmail.com
 
 <footer>
 
-<p>
-© 2026 LÊ HỮU THỌ Portfolio Website
-</p>
+<h4>
+© 2026 LÊ HỮU THỌ Portfolio
+</h4>
 
 </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-<script>
-
-AOS.init({
-    duration:1000
-});
-
-window.onload = function(){
-    document.getElementById("loader").style.display = "none";
-}
-
-</script>
 
 </body>
 </html>
